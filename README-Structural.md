@@ -112,6 +112,7 @@ Es una manera de hacer que un subsistema complejo se vuelva simple utilizando un
 Este patrón es ideal cuando se trabajan con muchas clases y estas son muy complejas o dificiles de entender. Por otro lado, Facade es la única via de acceso al subsistema. Un Facade bien hecho debe ser simple y debe facilitar las cosas, no debe ser complejo.
 
 * Ejemplo en Java:
+
 Creamos una interfaz:
 ```Java
 public interface Shape {

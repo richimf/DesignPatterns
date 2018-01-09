@@ -9,7 +9,7 @@
   - Adapter, Facade
 
 * [BEHAVIORAL](https://github.com/richimf/DesignPatterns/blob/master/README-Behavioral): Como coordinar interacciones entre objetos.
-  -Command, Observer, Model View Controller, Model View ViewModel, Clean Architecture
+  - Command, Observer, Model View Controller, Model View ViewModel, Clean Architecture
 
 
 ### REFERENCIAS ###
