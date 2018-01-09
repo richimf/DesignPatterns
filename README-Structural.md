@@ -267,7 +267,7 @@ Ver código completo de este [Decorator en Java](https://github.com/richimf/Desi
 
 En Swift es comun ver como se implementa este patrón en: Extensions y Delegation.
 * Extensions:
-Con un Extension podemos agregar nuevas funciones a clases, estructuras y enumerations que ya existen sin tener que hacer una subclase. A diferencia del patrón decorador no mantenemos la instancia de una case.
+Con un Extension podemos agregar nuevas funciones a clases, estructuras y enumerations que ya existen sin tener que hacer una subclase. A diferencia del patrón decorador no mantenemos la instancia de una clase.
 
 
 
