@@ -164,6 +164,26 @@ final class Singleton {
 }
 ```
 
+### STRUCTURAL ###
+#### ADAPTER ####
+Este patron consiste en crear dos Clases incompatibles en compatibles.
+Es decir, un Adapter permite que clases con interfaces incompatibles trabajen juntas.
+...Los Adapters hacen que las cosas funcionen despues de haber sido diseñadas, pensemos en un destornillador de cruz, pero el cliente quiere uno de linea, entonces podriamos crear un adaptador.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### REFERENCIAS ###
 * Design Patterns explained simply [Source Making](https://sourcemaking.com/design_patterns)
