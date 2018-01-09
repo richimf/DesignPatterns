@@ -111,6 +111,79 @@ Otro ejemplo de uso es en Android, un [Adapter](https://github.com/richimf/Tutos
 Es una manera de hacer que un subsistema complejo se vuelva simple utilizando una interfaz de alto nivel.
 Este patrón es ideal cuando se trabajan con muchas clases y estas son muy complejas o dificiles de entender. Por otro lado, Facade es la única via de acceso al subsistema. Un Facade bien hecho debe ser simple y debe facilitar las cosas, no debe ser complejo.
 
+* Ejemplo en Java:
+Creamos una interfaz:
+```Java
+public interface Shape {
+   void draw();
+}
+```
+
+Creamos clases que implementen esta interfaz:
+```Java
+public class Rectangle implements Shape {
+
+   @Override
+   public void draw() {
+      System.out.println("Rectangle::draw()");
+   }
+}
+
+public class Square implements Shape {
+
+   @Override
+   public void draw() {
+      System.out.println("Square::draw()");
+   }
+}
+
+public class Circle implements Shape {
+
+   @Override
+   public void draw() {
+      System.out.println("Circle::draw()");
+   }
+}
+```
+
+Creamos una clase Facade:
+```Java
+public class ShapeMaker {
+   private Shape circle;
+   private Shape rectangle;
+   private Shape square;
+
+   public ShapeMaker() {
+      circle = new Circle();
+      rectangle = new Rectangle();
+      square = new Square();
+   }
+
+   public void drawCircle(){
+      circle.draw();
+   }
+   public void drawRectangle(){
+      rectangle.draw();
+   }
+   public void drawSquare(){
+      square.draw();
+   }
+}
+```
+
+Implementamos el Facade:
+```Java
+public class FacadePatternDemo {
+   public static void main(String[] args) {
+      ShapeMaker shapeMaker = new ShapeMaker();
+      shapeMaker.drawCircle();
+      shapeMaker.drawRectangle();
+      shapeMaker.drawSquare();      
+   }
+}
+```
+
+* Ejemplo en Swift:
 >Supongamos que tenemos dos sistemas llamados "PersistencyManager" (un sistema local) y "HTTPClient" (un servidor).
 Estos sistemas tienen una lógica muy compleja, la cuál a nuestra App no le interesa.
 Ahora, para implementar el patrón Facade usaremos un intermediario, lo llamaremos "LibraryAPI" la cuál tendra instancias de "PersistencyManager" y de "HTTPClient".
@@ -144,7 +217,7 @@ func deleteAlbum(at index: Int) {
 
 ```
 
-
+* Ejemplo en Android:
 >Supongamos que en un Activity necesitamos una lista de libros, deberiamos ser capacez de preguntarle a un objeto por ellos sin importarnos como obtenemos la información. Por lo tanto, podemos cambiar el codigo del API que alimenta la lista de libros sin modificar nuestro Activity. Ambos deben ser independientes. Un ejemplo de uso de Facade es [Retrofit](http://square.github.io/retrofit/).
 
 ```Kotlin
