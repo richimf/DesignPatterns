@@ -103,7 +103,7 @@ Octal String: 12
 Binary String: 1010
 ```
 
-*En Swift Cocoa implementa este patrón de diseño de dos maneras:
+* En Swift, Cocoa implementa este patrón de diseño de dos maneras:
 - Notifications:
 	- Las notificaciones estan basadas en el modelo "subscribe-and-publish" la cuál permite al objeto (el publisher) enviar mensajes a otros objetos (subscribers/listeners).
 
