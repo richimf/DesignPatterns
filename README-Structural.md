@@ -3,6 +3,7 @@
 ### CATEGORIAS ###
 
 * STRUCTURAL: Como componer objetos.
+
   - Adapter, Facade, Decorator
 
 ### STRUCTURAL ###
@@ -264,11 +265,9 @@ public class Main {
 Ver código completo de este [Decorator en Java](https://github.com/richimf/DesignPatterns/tree/master/Java/DecoratorPattern/src/com/PatronDecorador)
 
 
-
-
-
-
-
+En Swift es comun ver como se implementa este patrón en: Extensions y Delegation.
+* Extensions:
+Con un Extension podemos agregar nuevas funciones a clases, estructuras y enumerations que ya existen sin tener que hacer una subclase. A diferencia del patrón decorador no mantenemos la instancia de una case.
 
 
 
