@@ -6,7 +6,9 @@
   - Builder, Dependency Injection, Singleton
 
 * [STRUCTURAL](https://github.com/richimf/DesignPatterns/blob/master/README-Structural.md): Como componer objetos.
-  - Adapter, Facade
+  - Adapter: Hace que clases incompatibles sean compatibles entre sí.
+  - Facade:  Una clase que representa un subsistema completo.
+  - Decorador: Permite agregar funcionalidad a un objeto sin alterar su estructura.
 
 * [BEHAVIORAL](https://github.com/richimf/DesignPatterns/blob/master/README-Behavioral): Como coordinar interacciones entre objetos.
   - Command, Observer, Model View Controller, Model View ViewModel, Clean Architecture

@@ -3,7 +3,7 @@
 ### CATEGORIAS ###
 
 * STRUCTURAL: Como componer objetos.
-  - Adapter, Facade
+  - Adapter, Facade, Decorator
 
 ### STRUCTURAL ###
 #### ADAPTER ####
@@ -231,10 +231,37 @@ interface BooksApi {
 ```
 
 
+#### DECORATOR ####
+
+El Patrón Decorator permite agregar funcionalidades y responsabilidades a objetos de forma dinámica y transparente para el usuario,
+esto se realiza por medio de relaciones con otras clases extendiendo su funcionalidad al incorporar las de las clases asociadas,
+de esta forma el patrón no es dependiente de la Herencia ya que aunque esta puede jugar un papel importante,
+prevalece el uso de conceptos como la composición al momento de definir comportamientos.
+Con los decoradores, podemos agregar funcionalidad adicional a un objeto, recordar que el decorador debe ser del mismo tipo que el objeto que se va a decorar, por eso el decorador hereda de la misma Super Clase.
 
 
+```Java
+public class Main {
 
+    public static void main(String[] args) {
 
+        System.out.println("========= COMBO BASICO ======");
+        Combo comboBasico = new Basico(); //Creamos un combo basico
+        comboBasico = new Queso(comboBasico); //mejoramos nuestro combo basico, agregamos queso
+        comboBasico = new Carne(comboBasico); //Agregamos Carne extra
+        comboBasico = new Papas(comboBasico); //Agregamos Papas
+
+        System.out.println("========= COMBO FAMILIAR ======");
+
+        Combo comboFamiliar = new Familiar();     //Creamos un combo familiar
+        comboFamiliar = new Queso(comboFamiliar); //Mejoramos nuestro combo familiar, agregamos queso
+        comboFamiliar = new Carne(comboFamiliar); //Agregamos Carne extra
+        comboFamiliar = new Papas(comboFamiliar); //Agregamos Papas
+    }
+}
+
+```
+Ver código completo de este [Decorator en Java](https://github.com/richimf/DesignPatterns/tree/master/Java/DecoratorPattern/src/com/PatronDecorador)
 
 
 
