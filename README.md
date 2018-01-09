@@ -10,7 +10,7 @@
   - Facade:  Una clase que representa un subsistema completo.
   - Decorador: Permite agregar funcionalidad a un objeto sin alterar su estructura.
 
-* [BEHAVIORAL](https://github.com/richimf/DesignPatterns/blob/master/README-Behavioral): Como coordinar interacciones entre objetos.
+* [BEHAVIORAL](https://github.com/richimf/DesignPatterns/blob/master/README-Behavioral.md): Como coordinar interacciones entre objetos.
   - Command, Observer, Model View Controller, Model View ViewModel, Clean Architecture
 
 
