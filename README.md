@@ -3,13 +3,13 @@
 ### CATEGORIAS ###
 
 * CREATIONAL: Como crear objetos.
-	- Builder, Dependency Injection, Singleton
+  - Builder, Dependency Injection, Singleton
 
 * STRUCTURAL: Como componer objetos.
-	- Adapter, Facade
+  - Adapter, Facade
 
 * BEHAVIORAL: Como coordinar interacciones entre objetos.
-	-Command, Observer, Model View Controller, Model View ViewModel, Clean Architecture
+  -Command, Observer, Model View Controller, Model View ViewModel, Clean Architecture
 
 ### CREATIONAL ###
 #### BUILDER ####
@@ -29,25 +29,25 @@ AlertDialog.Builder(this)
 ```java
 public static class MyClassBuilder {
 
-	private MyClassBuilder mb;
+  private MyClassBuilder mb;
 
-		//Constructor
-		public MyClassBuilder(){
-			mb = new MyClassBuilder();
-		}
+    //Constructor
+    public MyClassBuilder(){
+      mb = new MyClassBuilder();
+    }
 
-		//Example of method using Pattern Builder
-		public MyClassBuilder setColor(Color color){
-			mb.color = color;
-			return this; // <---
-		}
+    //Example of method using Pattern Builder
+    public MyClassBuilder setColor(Color color){
+      mb.color = color;
+      return this; // <---
+    }
 
-		public MyClassBuilder setValue(Int number){
-			mb.value = number;
-			return this; // <---
-		}
+    public MyClassBuilder setValue(Int number){
+      mb.value = number;
+      return this; // <---
+    }
 
-		//etc...
+    //etc...
 }
 ```
 
@@ -106,7 +106,7 @@ public class Injector {
 
         // Use the objects
         System.out.println(client.greet());
-    }	
+    } 
 }
 ```
 Ver [Dragger](https://google.github.io/dagger/android.html) para Android.
@@ -141,7 +141,7 @@ public class Singleton {
    }
 
    public static Singleton getInstance() {
-   	//If instance is null create object otherwise return it.
+    //If instance is null create object otherwise return it.
       if(instance == null) {
          instance = new Singleton();
       }
@@ -166,6 +166,8 @@ final class Singleton {
 
 
 ### REFERENCIAS ###
+* Design Patterns explained simply [Source Making](https://sourcemaking.com/design_patterns)
+* Design Patterns on iOS using Swift [Raywenderlich](https://www.raywenderlich.com/160651/design-patterns-ios-using-swift-part-12)
 * Common Design Patterns for Android with Kotlin [Raywenderlich](https://www.raywenderlich.com/168038/common-design-patterns-android-kotlin)
 * Dependency Injection [Wikipedia](https://en.wikipedia.org/wiki/Dependency_injection)
 
