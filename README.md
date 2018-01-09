@@ -19,10 +19,8 @@
 * Dependency Injection [Wikipedia](https://en.wikipedia.org/wiki/Dependency_injection)
 
 
-
-
-
-
+#### Twitter ####
+Richie @richietelible
 
 
 

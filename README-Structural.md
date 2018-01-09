@@ -103,7 +103,12 @@ Dicho esto, tenemos algunas diferencias respecto a otros patrones de diseño.
   - Bridge hace que las cosas funcionen antes de ser diseñadas. El Adapter al revés, hace que funcionen después de ser diseñadas.
   - El Adapter proporciona una interfaz diferente. Proxy proporciona la misma interfaz. Decorator proporciona una interfaz mejorada. Facade define una nueva interfaz.
 
-Otro ejemplo de uso es en Android, un Adapter es muy utilizado en RecyclerViews.
+Otro ejemplo de uso es en Android, un [Adapter](https://github.com/richimf/TutosAndroid/blob/master/RecyclerViewTuto/app/src/main/java/com/example/ricardomontesinos/recyclerviewtuto/RecyclerAdapter.java) es muy utilizado en RecyclerViews.
+
+
+#### FACADE ####
+
+Es una manera de hacer que un subsistema complejo se vuelva simple utilizando una interfaz de alto nivel.
 
 
 
@@ -114,11 +119,20 @@ Otro ejemplo de uso es en Android, un Adapter es muy utilizado en RecyclerViews.
 
 
 
-### REFERENCIAS ###
-* Design Patterns explained simply [Source Making](https://sourcemaking.com/design_patterns)
-* Design Patterns on iOS using Swift [Raywenderlich](https://www.raywenderlich.com/160651/design-patterns-ios-using-swift-part-12)
-* Common Design Patterns for Android with Kotlin [Raywenderlich](https://www.raywenderlich.com/168038/common-design-patterns-android-kotlin)
-* Dependency Injection [Wikipedia](https://en.wikipedia.org/wiki/Dependency_injection)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
