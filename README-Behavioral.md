@@ -7,7 +7,8 @@
 
 ### BEHAVIORAL ###
 #### OBSERVER ####
-El patron observador es usado cuando hay una relacion 1-N uno a muchos entre objetos, entonces, si un objeto es modificado, los demas objetos relacionados serán notificados automáticamente. 
+En el patrón Observador, un objeto notifica a otros objetos de cualquier cambio.
+Es usado cuando hay una relacion 1-N uno a muchos entre objetos, entonces, si un objeto es modificado, los demas objetos relacionados serán notificados automáticamente. 
 Este patrón usa tres componentes: Subject, Observers y Client. 
 
 ```Java
@@ -101,6 +102,43 @@ Second state change: 10
 Octal String: 12
 Binary String: 1010
 ```
+
+*En Swift Cocoa implementa este patrón de diseño de dos maneras:
+- Notifications:
+	- Las notificaciones estan basadas en el modelo "subscribe-and-publish" la cuál permite al objeto (el publisher) enviar mensajes a otros objetos (subscribers/listeners).
+
+	- Tambien se utilizan otras notificaciones, como la del teclado UIKeyboardWillShow/UIKeyboardWillHide. Y cuando la App va hacia el background el sistema utiliza la notificación UIApplicationDidEnterBackground.
+
+- Key-Value Observing (KVO).
+	- Con KVO podemos observar los cambios de un Property, [ejemplo](https://cocoacasts.com/key-value-observing-kvo-and-swift-3/).
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
