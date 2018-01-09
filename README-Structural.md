@@ -109,13 +109,52 @@ Otro ejemplo de uso es en Android, un [Adapter](https://github.com/richimf/Tutos
 #### FACADE ####
 
 Es una manera de hacer que un subsistema complejo se vuelva simple utilizando una interfaz de alto nivel.
+Este patrón es ideal cuando se trabajan con muchas clases y estas son muy complejas o dificiles de entender. Por otro lado, Facade es la única via de acceso al subsistema. Un Facade bien hecho debe ser simple y debe facilitar las cosas, no debe ser complejo.
+
+>Supongamos que tenemos dos sistemas llamados "PersistencyManager" (un sistema local) y "HTTPClient" (un servidor).
+Estos sistemas tienen una lógica muy compleja, la cuál a nuestra App no le interesa.
+Ahora, para implementar el patrón Facade usaremos un intermediario, lo llamaremos "LibraryAPI" la cuál tendra instancias de "PersistencyManager" y de "HTTPClient".
+"LibraryAPI" a la vez ocultará a los dos sistemas de la App. El siguiente ejemplo crea una clase de Swift la cuál solo debemos utilizar para hacer la comunicación con ambos sistemas.
+
+```Swift
+//Inside  LibraryAPI.swift we create instances of the systems.
+private let persistencyManager = PersistencyManager()
+private let httpClient = HTTPClient()
+private let isOnline = false
+
+func getAlbums() -> [Album] {
+  return persistencyManager.getAlbums()    
+}
+  
+func addAlbum(_ album: Album, at index: Int) {
+  //First save data locally
+  persistencyManager.addAlbum(album, at: index)
+  //If there is internet connection, upload it to the server
+  if isOnline {
+    httpClient.postRequest("/api/addAlbum", body: album.description)
+  }  
+}
+  
+func deleteAlbum(at index: Int) {
+  persistencyManager.deleteAlbum(at: index)
+  if isOnline {
+    httpClient.postRequest("/api/deleteAlbum", body: "\(index)")
+  }   
+}
+
+```
 
 
+>Supongamos que en un Activity necesitamos una lista de libros, deberiamos ser capacez de preguntarle a un objeto por ellos sin importarnos como obtenemos la información. Por lo tanto, podemos cambiar el codigo del API que alimenta la lista de libros sin modificar nuestro Activity. Ambos deben ser independientes. Un ejemplo de uso de Facade es [Retrofit](http://square.github.io/retrofit/).
 
-
-
-
-
+```Kotlin
+//Retrofit example.
+//The client simply needs to call listBooks() to receive a list of Book objects.
+interface BooksApi {
+  @GET("books")
+  fun listBooks(): Call<List<Book>>
+}
+```
 
 
 
