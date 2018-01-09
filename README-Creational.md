@@ -5,12 +5,6 @@
 * CREATIONAL: Como crear objetos.
   - Builder, Dependency Injection, Singleton
 
-* STRUCTURAL: Como componer objetos.
-  - Adapter, Facade
-
-* BEHAVIORAL: Como coordinar interacciones entre objetos.
-  -Command, Observer, Model View Controller, Model View ViewModel, Clean Architecture
-
 ### CREATIONAL ###
 #### BUILDER ####
 Cuando queremos crear un objeto y poco a poco lo vamos haciendo mas complejo.

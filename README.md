@@ -2,14 +2,13 @@
 
 ### CATEGORIAS ###
 
-* [CREATIONAL](): Como crear objetos.
+* [CREATIONAL](https://github.com/richimf/DesignPatterns/blob/master/README-Creational.md): Como crear objetos.
   - Builder, Dependency Injection, Singleton
 
-* [STRUCTURAL](): Como componer objetos.
+* [STRUCTURAL](https://github.com/richimf/DesignPatterns/blob/master/README-Structural.md): Como componer objetos.
   - Adapter, Facade
-    Ver [tutorial](https://sourcemaking.com/design_patterns)
 
-* [BEHAVIORAL](): Como coordinar interacciones entre objetos.
+* [BEHAVIORAL](https://github.com/richimf/DesignPatterns/blob/master/README-Behavioral): Como coordinar interacciones entre objetos.
   -Command, Observer, Model View Controller, Model View ViewModel, Clean Architecture
 
 
