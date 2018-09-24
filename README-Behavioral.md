@@ -13,6 +13,7 @@ Es usado cuando hay una relacion 1-N uno a muchos entre objetos, entonces, si un
 Este patrón usa tres componentes: Subject, Observers y Client. 
 
 ```Java
+//JAVA
 public abstract class Observer {
    protected Subject subject;  ///<-----
    public abstract void update();
@@ -21,6 +22,7 @@ public abstract class Observer {
 
 Nuestro Subject sera el encargado de gestionar las notificaciones.
 ```Java
+//JAVA
 public class Subject {
 	
    private List<Observer> observers = new ArrayList<Observer>();
@@ -49,6 +51,7 @@ public class Subject {
 
 Implementando los Observers, deben heredar de la clase Observer.
 ```Java
+//JAVA
 public class BinaryObserver extends Observer{
 
    public BinaryObserver(Subject subject){
@@ -77,6 +80,7 @@ public class OctalObserver extends Observer{
 ```
 
 ```Java
+//JAVA
 public class ObserverPatternDemo {
    public static void main(String[] args) {
       Subject subject = new Subject();
