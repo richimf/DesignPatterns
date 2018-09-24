@@ -15,6 +15,7 @@ Este patrón consiste en crear dos Clases incompatibles en compatibles, es decir
 Ejemplo sin Adapter. Una Linea y un Rectangulo son distintos e incompatibles, el usuario debe manualmente hacer que sean compatibles:
 
 ```Java
+//JAVA
 class Line {
     public void draw(int x1, int y1, int x2, int y2) {
         System.out.println("Line from point A(" + x1 + ";" + y1 + "), to point B(" + x2 + ";" + y2 + ")");
@@ -48,6 +49,7 @@ public class NoAdapterDemo {
 Ahora usando un Adapter.
 
 ```Java
+//JAVA
 interface Shape {
     void draw(int x, int y, int z, int j);
 }
@@ -116,6 +118,7 @@ Este patrón es ideal cuando se trabajan con muchas clases y estas son muy compl
 
 Creamos una interfaz:
 ```Java
+//JAVA
 public interface Shape {
    void draw();
 }
@@ -123,6 +126,7 @@ public interface Shape {
 
 Creamos clases que implementen esta interfaz:
 ```Java
+//JAVA
 public class Rectangle implements Shape {
 
    @Override
@@ -150,6 +154,7 @@ public class Circle implements Shape {
 
 Creamos una clase Facade:
 ```Java
+//JAVA
 public class ShapeMaker {
    private Shape circle;
    private Shape rectangle;
@@ -175,6 +180,7 @@ public class ShapeMaker {
 
 Implementamos el Facade:
 ```Java
+//JAVA
 public class FacadePatternDemo {
    public static void main(String[] args) {
       ShapeMaker shapeMaker = new ShapeMaker();
@@ -192,6 +198,7 @@ Ahora, para implementar el patrón Facade usaremos un intermediario, lo llamarem
 "LibraryAPI" a la vez ocultará a los dos sistemas de la App. El siguiente ejemplo crea una clase de Swift la cuál solo debemos utilizar para hacer la comunicación con ambos sistemas.
 
 ```Swift
+//SWIFT
 //Inside  LibraryAPI.swift we create instances of the systems.
 private let persistencyManager = PersistencyManager()
 private let httpClient = HTTPClient()
@@ -223,6 +230,7 @@ func deleteAlbum(at index: Int) {
 >Supongamos que en un Activity necesitamos una lista de libros, deberiamos ser capacez de preguntarle a un objeto por ellos sin importarnos como obtenemos la información. Por lo tanto, podemos cambiar el codigo del API que alimenta la lista de libros sin modificar nuestro Activity. Ambos deben ser independientes. Un ejemplo de uso de Facade es [Retrofit](http://square.github.io/retrofit/).
 
 ```Kotlin
+//KOTLIN
 //Retrofit example.
 //The client simply needs to call listBooks() to receive a list of Book objects.
 interface BooksApi {
@@ -242,6 +250,7 @@ Con los decoradores, podemos agregar funcionalidad adicional a un objeto, record
 
 
 ```Java
+//JAVA
 public class Main {
 
     public static void main(String[] args) {
