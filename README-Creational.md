@@ -111,6 +111,7 @@ Consiste en crear una instancia global de una clase, asi es, solo puede haber un
 En Kotlin usamos la palabra "object" para declarar un singleton:
 
 ```kotlin
+//KOTLIN
 object ExampleSingleton {
   fun exampleMethod() {
     // ...
@@ -124,8 +125,9 @@ ExampleSingleton.exampleMethod()
 ExampleSingleton.INSTANCE.exampleMethod();
 ```
 
-En Java seria de la siguiente manera:
+En **Java** seria de la siguiente manera:
 ```Java
+//JAVA
 public class Singleton {
 
    private static Singleton instance = null;
@@ -144,9 +146,10 @@ public class Singleton {
 }
 ```
 
-Y en Swift:
+Y en **Swift**:
 
 ```Swift
+//SWIFT
 //Final is class modifier which prevents it from being inherited or being overridden.
 final class Singleton {
 
