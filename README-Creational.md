@@ -13,6 +13,7 @@ Generalmente tiene esta estructura:
 
 >Podemos ver que se usa repetidamente "un punto" y una "funcion()""
 ```java
+//JAVA
 AlertDialog.Builder(this)
   .setTitle("My title")
   .setMessage("A message")
@@ -21,10 +22,9 @@ AlertDialog.Builder(this)
 
 >Ejemplo de como se crea una clase usando Pattern Builder:
 ```java
+//JAVA
 public static class MyClassBuilder {
-
   private MyClassBuilder mb;
-
     //Constructor
     public MyClassBuilder(){
       mb = new MyClassBuilder();
@@ -40,7 +40,6 @@ public static class MyClassBuilder {
       mb.value = number;
       return this; // <---
     }
-
     //etc...
 }
 ```
@@ -52,6 +51,7 @@ En Android, aveces necesitamos acceder a los mismos objetos complejos desde vari
 
 >Una Inyección de Dependencias es una tecnica para inicializar una variable en lugar de explicitamente crear un servicio objeto, como se muestra:
 ```java
+//JAVA
 // An example without dependency injection
 public class Client {
     // Internal reference to the service used by this client
@@ -72,6 +72,7 @@ public class Client {
 
 >Ahora utilizando Inyección de Dependencias:
 ```java
+//JAVA
 // Service setter interface.
 public interface ServiceSetter {
     public void setService(Service service);
