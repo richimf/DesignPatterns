@@ -20,7 +20,7 @@
 * Common Design Patterns for Android with Kotlin [Raywenderlich](https://www.raywenderlich.com/168038/common-design-patterns-android-kotlin)
 * Dependency Injection [Wikipedia](https://en.wikipedia.org/wiki/Dependency_injection)
 * Design Patterns [Tutorials Point](https://www.tutorialspoint.com/design_pattern/proxy_pattern.htm)
-
+* VIPER iOS [Building Todo List iOS App with VIPER Architecture](https://medium.com/swift2go/building-todo-list-ios-app-with-viper-architecture-bc954ea371bb)
 
 
 
