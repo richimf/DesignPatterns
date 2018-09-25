@@ -97,8 +97,8 @@ protocol ArticlesInteractorOutput: class {
  * The Presenter is also responsible for connecting
  * the other objects inside a VIPER module.
  */
-class ArticlesPresenter : ArticlesModuleInterface, ArticlesInteractorOutput
-{
+class ArticlesPresenter : ArticlesModuleInterface, ArticlesInteractorOutput {
+
     // Reference to the View (weak to avoid retain cycle).
     weak var view: ArticlesViewInterface!
 
@@ -137,8 +137,7 @@ class ArticlesPresenter : ArticlesModuleInterface, ArticlesInteractorOutput
 Example of an Entity:
 
 ```Swift
-class Article
-{
+class Article {
     var date: String?
     var title: String?
     var website: String?
@@ -165,8 +164,8 @@ protocol ArticlesInteractorInput: class {
  * The Interactor responsible for implementing
  * the business logic of the module.
  */
-class ArticlesInteractor : ArticlesInteractorInput
-{
+class ArticlesInteractor : ArticlesInteractorInput {
+
     // Url to the desired API.
     let url = "https://www.myendpoint.com"
 
@@ -231,6 +230,57 @@ class ArticlesWireframe : NSObject, ArticlesWireframeInput {
     }
 }
 ```
+
+## Example 2, Todo List
+
+Estructura de la App, se aprecia la carpeta **Entities**, y dos modulos **TodoDetailModule** y **TodoListModule**, cada uno con subcarpetas reverentes a **VIPER**, es decir, View, Interactor, Protocols, Router, Presenter.
+
+![](images/ejemplo_arquitectura.png)
+
+### Entities
+Los *Entities* ([TodoItem](examples/ios-todo-viper-master/TodoListViper/Entities/TodoItem.swift) y [TodoStore](examples/ios-todo-viper-master/TodoListViper/Entities/TodoStore.swift)) son modelos:
+
+``` Swift
+import Foundation
+
+class TodoItem {
+    
+    var title: String
+    var content: String
+    
+    init(title: String, content: String) {
+        self.title = title
+        self.content = content
+    }
+}
+```
+
+### Module: TodoListModule
+#### View:
+
+El [View](examples/ios-todo-viper-master/TodoListViper/TodoListModule/View/TodoListViewController.swift) es un ViewController, donde se invoca al `presenter`.
+
+``` Swift
+import UIKit
+
+class TodoListViewController: UITableViewController {
+    var presenter: TodoListPresenterProtocol?
+	 ...
+	
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let todo = todos[indexPath.row]
+        presenter?.showTodoDetail(todo)
+    }
+}
+extension TodoListViewController: TodoListViewProtocol {
+    
+    func showTodos(_ todos: [TodoItem]) {
+        self.todos = todos
+    }
+    ...
+}
+```
+
 
 ## Fuentes
 
