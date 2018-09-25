@@ -238,7 +238,7 @@ Estructura de la App, se aprecia la carpeta **Entities**, y dos modulos **TodoDe
 ![](images/ejemplo_arquitectura.png)
 
 ### Entities
-Los *Entities* ([TodoItem](examples/ios-todo-viper-master/TodoListViper/Entities/TodoItem.swift) y [TodoStore](examples/ios-todo-viper-master/TodoListViper/Entities/TodoStore.swift)) son modelos:
+Los *Entities* ([TodoItem](https://github.com/richimf/DesignPatterns/blob/master/Swift/VIPER/examples/example2/TodoListViper/Entities/TodoItem.swift) y [TodoStore](https://github.com/richimf/DesignPatterns/blob/master/Swift/VIPER/examples/example2/TodoListViper/Entities/TodoStore.swift)) son modelos:
 
 ``` Swift
 import Foundation
@@ -258,7 +258,7 @@ class TodoItem {
 ### Module: TodoListModule
 #### View:
 
-El [View](examples/ios-todo-viper-master/TodoListViper/TodoListModule/View/TodoListViewController.swift) es un ViewController, donde se invoca al `presenter`.
+El [View](https://github.com/richimf/DesignPatterns/blob/master/Swift/VIPER/examples/example2/TodoListViper/TodoListModule/View/TodoListViewController.swift) es un ViewController, donde se invoca al `presenter`.
 
 ``` Swift
 import UIKit
