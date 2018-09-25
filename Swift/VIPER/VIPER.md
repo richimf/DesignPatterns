@@ -4,9 +4,9 @@
 
 **VIPER** , es un patrón de arquitectura relacionado con *Clean Architecture Pradigm*. **VIPER**  es un patrón de diseño estructural para facilitar el acoplamiento entre clases.
 
-![](images/viper-scheme.png)
+![](images/viper.png)
 
-**V**: **View**, es básicamente una Vista, la idea es hacer la Vista lo mas **tonta** posible y que *solo se preocupe de mostrar la UI*. Es básicamente un protocolo que van a implementar nuestros ViewControllers. Las vistas esperan a que les lleguen los datos del **Presenter**.
+**V**: **View**, es básicamente una Vista, la idea es hacer la Vista lo mas **tonta** posible y que *solo se preocupe de mostrar la UI*. Es básicamente un protocolo que van a implementar nuestros *ViewControllers*. Las vistas esperan a que les lleguen los datos del **Presenter**.
 
 **I**: El **Interactor** se preocupa de ejecutar cualquier acción cuando el *Presenter* lo diga. El interactor lleva la **lógica de negocio**, va a tratar con las clases **Entity**, manejar su lógica y es el que va a pasarle al **Presenter** la información que necesita para la **Vista**.
 
@@ -234,6 +234,8 @@ class ArticlesWireframe : NSObject, ArticlesWireframeInput {
 
 ## Fuentes
 
-[Building iOS App With VIPER](https://cheesecakelabs.com/blog/ios-project-architecture-using-viper/)
+[Building iOS App With VIPER - cheesecakelabs.com](https://cheesecakelabs.com/blog/ios-project-architecture-using-viper/)
 
-https://www.adictosaltrabajo.com/tutoriales/viper/
+[Building Todo List iOS App with VIPER Architecture - medium.com](https://medium.com/swift2go/building-todo-list-ios-app-with-viper-architecture-bc954ea371bb)
+
+[Tutorial Viper - adictosaltrabajo.com](https://www.adictosaltrabajo.com/tutoriales/viper/)
