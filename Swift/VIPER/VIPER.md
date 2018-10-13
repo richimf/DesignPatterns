@@ -238,7 +238,10 @@ Estructura de la App, se aprecia la carpeta **Entities**, y dos modulos **TodoDe
 ![](images/ejemplo_arquitectura.png)
 
 ### Entities
-Los *Entities* ([TodoItem](https://github.com/richimf/DesignPatterns/blob/master/Swift/VIPER/examples/example2/TodoListViper/Entities/TodoItem.swift) y [TodoStore](https://github.com/richimf/DesignPatterns/blob/master/Swift/VIPER/examples/example2/TodoListViper/Entities/TodoStore.swift)) son modelos:
+Los *Entities* ([TodoItem](https://github.com/richimf/DesignPatterns/blob/master/Swift/VIPER/examples/example2/TodoListViper/Entities/TodoItem.swift) y [TodoStore](https://github.com/richimf/DesignPatterns/blob/master/Swift/VIPER/examples/example2/TodoListViper/Entities/TodoStore.swift)) son modelos. 
+
+- `TodoItem` is just a plain class that represent a `TodoItem` object. 
+- `TodoStore` is the DataStore Singleton object that stores the list of `TodoItem`. 
 
 ``` Swift
 import Foundation
@@ -280,6 +283,40 @@ extension TodoListViewController: TodoListViewProtocol {
     ...
 }
 ```
+
+#### Protocols:
+
+Usamos los protocolos en cada componente para definir como se comunicarán con el modulo `TodoList`.
+
+``` Swift
+protocol TodoListViewProtocol: class {
+    
+    var presenter: TodoListPresenterProtocol? { get set }
+    
+    // PRESENTER -> VIEW
+    func showTodos(_ todos: [TodoItem])
+    func showErrorMessage(_ message: String)
+}
+```
+``` Swift
+protocol TodoListPresenterProtocol: class {
+    
+    var view: TodoListViewProtocol? { get set }
+    var interactor: TodoListInteractorInputProtocol? { get set }
+    var router: TodoListRouterProtocol? { get set }
+    
+    // VIEW -> PRESENTER
+    func viewWillAppear()
+    func showTodoDetail(_ Todo: TodoItem)
+    func addTodo(_ todo: TodoItem)
+    func removeTodo(_ todo: TodoItem)
+}
+```
+
+### Implementando los Protocols
+
+TodoListViewController responsibility is to display the user interface as told by the presenter.  It keeps a reference to the presenter to relay user input and view lifecycle event to the presenter to react.
+
 
 
 ## Fuentes
