@@ -23,6 +23,18 @@
 * VIPER iOS [Building Todo List iOS App with VIPER Architecture](https://medium.com/swift2go/building-todo-list-ios-app-with-viper-architecture-bc954ea371bb)
 
 
+# SOLID Hint:
+
+Single Respon., class only sing respon.
+
+Open/Close., class o module oopen to extension, close to modification
+
+Liskov substitution principle, objects should be replaceable with instances of their subtypes
+
+Interface Segregation., client should not be forced to use an interface irrelevant to it.
+
+Dependency Inversion, High Class not depende on low level class, both depends on abstractions.
+
 
 
 
